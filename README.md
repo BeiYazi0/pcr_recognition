@@ -13,11 +13,15 @@ https://github.com/BeiYazi0/pcr_recognition
 
 git clone https://github.com/BeiYazi0/pcr_recognition
 
-2.下载模型
+2.安装依赖:
+
+pip install -r requirements.txt
+
+3.下载模型
 
 下载release中的pcr_recognition.h5，并放在models文件夹下。
 
-3.启用：
+4.启用：
 
 在 HoshinoBot\hoshino\config\ **bot**.py 文件的 MODULES_ON 加入 'pcr_recognition'
 
