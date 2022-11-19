@@ -13,7 +13,11 @@ https://github.com/BeiYazi0/pcr_recognition
 
 git clone https://github.com/BeiYazi0/pcr_recognition
 
-2.启用：
+2.下载模型
+
+下载release中的pcr_recognition.h5，并放在models文件夹下。
+
+3.启用：
 
 在 HoshinoBot\hoshino\config\ **bot**.py 文件的 MODULES_ON 加入 'pcr_recognition'
 
@@ -31,5 +35,9 @@ git clone https://github.com/BeiYazi0/pcr_recognition
 
 
 ## 备注
+
+模型训练集数量为35000左右，包含75个角色（见duel_data.py），准确率约为91%，识别图像包含角色全身效果较好。
+
+感觉比起模型本身，精选图片价值更高hhh。已经尽量排除r18，但也难免手抖。
 
 等待更新中。。。
