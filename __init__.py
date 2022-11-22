@@ -31,6 +31,9 @@ async def matching(bot, ev: CQEvent):
     
 @sv.scheduled_job('cron', hour=10, minute=0)
 async def birthday_daily_push():
+    flag, _, _ = check_birth()
+    if flag:
+        return
     birth_msg_lst = celebrate_birth()
     if birth_msg_lst == []:
         return
