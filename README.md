@@ -37,6 +37,14 @@ pip install -r requirements.txt
 
 角色生日当天发送通知。收到包含“生日快乐”和角色名在内的祝福语，返回生日剧情语句和角色精选图片。前三次祝福随机获得100~200金币，金币与赛跑联动。
 
+## 测试效果
+princess connect
+![image](https://github.com/BeiYazi0/pcr_recognition/blob/main/test/pcr_reco1.jpg)
+![image](https://github.com/BeiYazi0/pcr_recognition/blob/main/test/pcr_reco2.jpg)
+
+生日祝福
+![image](https://github.com/BeiYazi0/pcr_recognition/blob/main/test/birth_note.jpg)
+![image](https://github.com/BeiYazi0/pcr_recognition/blob/main/test/birth_celebrate.jpg)
 
 ## 备注
 
