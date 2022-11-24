@@ -39,8 +39,8 @@ pip install -r requirements.txt
 
 ## 测试效果
 princess connect
-![image](https://github.com/BeiYazi0/pcr_recognition/blob/main/test/pcr_reco1.jpg)
-![image](https://github.com/BeiYazi0/pcr_recognition/blob/main/test/pcr_reco2.jpg)
+![image](https://github.com/BeiYazi0/pcr_recognition/blob/main/test/pcr_reco_1.jpg)
+![image](https://github.com/BeiYazi0/pcr_recognition/blob/main/test/pcr_reco_2.jpg)
 
 生日祝福
 ![image](https://github.com/BeiYazi0/pcr_recognition/blob/main/test/birth_note.jpg)
