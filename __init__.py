@@ -7,7 +7,7 @@ from hoshino.typing import CQEvent
 from hoshino import Service
 
 from .recognition import pcr_matching
-from .birth import check_birth, celebrate_birth, gift
+from .birth import check_birth, celebrate_birth, gift, pcr_dynamic
 
 
 sv_help = '''
@@ -74,3 +74,16 @@ async def birthday_bless(bot, ev: CQEvent):
             msg = gift(charalst[i], gid, uid)
             await bot.send(ev, msg, at_sender = True)
             break
+
+            
+@sv.scheduled_job('interval', seconds=200) 
+async def dynamic_get():
+    msg = pcr_dynamic()
+    if msg == None:
+        return
+    bot = hoshino.get_bot()
+    glist = await sv.get_enable_groups()
+    for gid, selfids in glist.items():
+        sid = random.choice(selfids)
+        await bot.send_group_msg(self_id=sid, group_id=gid, message=msg)
+        await asyncio.sleep(2)
