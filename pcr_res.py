@@ -88,3 +88,37 @@ def desc_info(idx: int, p:float):
 
     msg = render_forward_msg(msg_list)
     return msg
+
+
+def pcr_dynamic():
+    url='https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/space_history'
+    params={'host_uid':353840826}
+    res=requests.get(url,params)
+    r=res.json()['data']["cards"][0]
+    source='https://t.bilibili.com/'+r["desc"]["dynamic_id_str"]
+    with open(_dir+'dynamic_id.txt','rt',encoding='utf_8') as f:
+        url=f.read()
+    if url == source:
+        return None
+    else:
+        with open(_dir+'dynamic_id.txt','w',encoding='utf_8') as f:
+            f.write(source)
+    p=json.loads(r["card"])
+    bot = hoshino.get_bot()
+    try:
+        text=p["item"]["description"]
+        url=p["item"]["pictures"][0]["img_src"]
+    except:
+        try:
+            p=json.loads(p["origin"])
+            text=p["item"]["description"]
+            url=p["item"]["pictures"][0]["img_src"]
+        except:
+            try:
+                text=p["dynamic"]
+                url=p["pic"]
+            except:
+                return 
+    result='公主连结ReDive的bilibili动态:\n'+source+'\n------------\n'+text
+    mycontent=f"{result} [CQ:image,file={url}]"
+    return mycontent
