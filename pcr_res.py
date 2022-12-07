@@ -104,7 +104,6 @@ def pcr_dynamic():
         with open(_dir+'\\dynamic_id.txt','w',encoding='utf_8') as f:
             f.write(source)
     p=json.loads(r["card"])
-    bot = hoshino.get_bot()
     try:
         text=p["item"]["description"]
         url=p["item"]["pictures"][0]["img_src"]
