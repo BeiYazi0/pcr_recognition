@@ -96,12 +96,12 @@ def pcr_dynamic():
     res=requests.get(url,params)
     r=res.json()['data']["cards"][0]
     source='https://t.bilibili.com/'+r["desc"]["dynamic_id_str"]
-    with open(_dir+'dynamic_id.txt','rt',encoding='utf_8') as f:
+    with open(_dir+'\\dynamic_id.txt','rt',encoding='utf_8') as f:
         url=f.read()
     if url == source:
         return None
     else:
-        with open(_dir+'dynamic_id.txt','w',encoding='utf_8') as f:
+        with open(_dir+'\\dynamic_id.txt','w',encoding='utf_8') as f:
             f.write(source)
     p=json.loads(r["card"])
     bot = hoshino.get_bot()
