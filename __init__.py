@@ -7,7 +7,8 @@ from hoshino.typing import CQEvent
 from hoshino import Service
 
 from .recognition import pcr_matching
-from .birth import check_birth, celebrate_birth, gift, pcr_dynamic
+from .birth import check_birth, celebrate_birth, gift
+from .pcr_res import pcr_dynamic
 
 
 sv_help = '''
