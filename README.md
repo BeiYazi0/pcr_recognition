@@ -41,17 +41,21 @@ pip install -r requirements.txt
 
 ## 测试效果
 princess connect
-![image](https://github.com/BeiYazi0/pcr_recognition/blob/main/test/pcr_reco_1.jpg)
-![image](https://github.com/BeiYazi0/pcr_recognition/blob/main/test/pcr_reco_2.jpg)
+
+![img](./test/pcr_reco_1.jpg)
+
+![img](./test/pcr_reco_2.jpg)
 
 生日祝福
-![image](https://github.com/BeiYazi0/pcr_recognition/blob/main/test/birth_note.jpg)
-![image](https://github.com/BeiYazi0/pcr_recognition/blob/main/test/birth_celebrate.jpg)
+
+![img](./test/birth_note.jpg)
+
+![img](./test/birth_celebrate.jpg)
 
 ## 备注
 
 模型训练集数量为35000左右，包含75个角色（见duel_data.py），准确率约为91%（指训练集），识别图像包含角色全身效果较好。
 
-感觉比起模型本身，精选图片价值更高hhh。已经尽量排除r18，但也难免手抖。
+感觉比起模型本身，精选图片价值更高hhh。
 
 等待更新中。。。
